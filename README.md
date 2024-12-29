@@ -18,6 +18,10 @@ You need to set a valid location for the Bus Stopping trigger; refer to the guid
 ```
 > Refer to step <ins>3</ins> of the [installation](https://github.com/le-open-source/iBus-System?tab=readme-ov-file#installation). You either assigned the ObjectValue to the wrong object, or didn't assign it at all
 
+## Further Support
+
+For further support, feel free to join our [support server on Discord](https://discord.gg/Z5RK4GYfuN).
+
 ## Installation
 
 1. Insert the `iBusModule` script into $\color{blue}{\textsf{ServerScriptService}}$
