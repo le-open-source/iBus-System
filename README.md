@@ -1,5 +1,5 @@
 # iBus System
-A basic replica of the real-life iBus System used by Transport for London, but written in lua for Roblox.
+A basic replica of the real-life iBus System used by Transport for London, but written in lua for Roblox. This project is in no way affiliated with Transport for London, or any sort of organisation involving the development of the official model.
 
 ## Error Analysis
 
