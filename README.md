@@ -6,17 +6,17 @@ A basic replica of the real-life iBus System used by Transport for London, but w
 ```
 You need to set a valid location for the Front Doors trigger; refer to the guide for more info
 ```
-> Refer to step <ins>3</ins>. You either assigned the ObjectValue to the wrong object, or didn't assign it at all
+> Refer to step <ins>3</ins> of the [installation](https://github.com/le-open-source/iBus-System?tab=readme-ov-file#installation). You either assigned the ObjectValue to the wrong object, or didn't assign it at all
 
 ```
 You need to set a valid location for the Rear Doors trigger; refer to the guide for more info
 ```
-> Refer to step <ins>3</ins>. You either assigned the ObjectValue to the wrong object, or didn't assign it at all
+> Refer to step <ins>3</ins> of the [installation](https://github.com/le-open-source/iBus-System?tab=readme-ov-file#installation). You either assigned the ObjectValue to the wrong object, or didn't assign it at all
 
 ```
 You need to set a valid location for the Bus Stopping trigger; refer to the guide for more info
 ```
-> Refer to step <ins>3</ins>. You either assigned the ObjectValue to the wrong object, or didn't assign it at all
+> Refer to step <ins>3</ins> of the [installation](https://github.com/le-open-source/iBus-System?tab=readme-ov-file#installation). You either assigned the ObjectValue to the wrong object, or didn't assign it at all
 
 ## Installation
 
