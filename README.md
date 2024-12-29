@@ -18,11 +18,6 @@ You need to set a valid location for the Bus Stopping trigger; refer to the guid
 ```
 > Refer to step <ins>3</ins>. You either assigned the ObjectValue to the wrong object, or didn't assign it at all
 
-```lua
-
-```
-> Refer to step <ins>3</ins>. You either assigned the ObjectValue to the wrong object, or didn't assign it at all
-
 ## Installation
 
 1. Insert the `iBusModule` script into $\color{blue}{\textsf{ServerScriptService}}$
