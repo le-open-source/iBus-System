@@ -1,244 +1,239 @@
 local iBusModule = {}
-
-encryptionKey = script:GetAttribute("encryptionKey")
 iBusExtraInfo = script:GetAttribute("iBusExtraInfo")
 diversionRadius = 200
 
-function iBusModule.ButtonVariation(scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+function iBusModule.ButtonVariation(scriptRef, routes, garage, manualAnnouncements)
 	scriptRef.Parent.Buttons.SurfaceGui.SideOne.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("SideOne", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("SideOne", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.SideTwo.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("SideTwo", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("SideTwo", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.SideThree.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("SideThree", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("SideThree", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.SideFour.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("SideFour", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("SideFour", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 
 	scriptRef.Parent.Buttons.SurfaceGui.BottomOne.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("BottomOne", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("BottomOne", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.BottomTwo.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("BottomTwo", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("BottomTwo", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.BottomThree.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("BottomThree", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("BottomThree", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.BottomFour.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("BottomFour", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("BottomFour", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.BottomFive.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("BottomFive", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("BottomFive", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 
 	scriptRef.Parent.Buttons.SurfaceGui.Call.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("Call", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("Call", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 
 	scriptRef.Parent.Buttons.SurfaceGui.Speaker.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("Speaker", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("Speaker", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 
 	scriptRef.Parent.Buttons.SurfaceGui.SMS.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("SMS", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("SMS", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 
 	scriptRef.Parent.Buttons.SurfaceGui.CodeBlue.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("CodeBlue", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("CodeBlue", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.CodeRed.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("CodeRed", scriptRef, encryptionKey, routes, garage, manualAnnouncements)
+		iBusModule.ButtonPressed("CodeRed", scriptRef, routes, garage, manualAnnouncements)
 	end)
 
 
 
 	scriptRef.Parent.Buttons.SurfaceGui["1"].MouseButton1Click:Connect(function()
-		iBusModule.Login("1", scriptRef, encryptionKey)
+		iBusModule.Login("1", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["2"].MouseButton1Click:Connect(function()
-		iBusModule.Login("2", scriptRef, encryptionKey)
+		iBusModule.Login("2", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["3"].MouseButton1Click:Connect(function()
-		iBusModule.Login("3", scriptRef, encryptionKey)
+		iBusModule.Login("3", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["4"].MouseButton1Click:Connect(function()
-		iBusModule.Login("4", scriptRef, encryptionKey)
+		iBusModule.Login("4", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["5"].MouseButton1Click:Connect(function()
-		iBusModule.Login("5", scriptRef, encryptionKey)
+		iBusModule.Login("5", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["6"].MouseButton1Click:Connect(function()
-		iBusModule.Login("6", scriptRef, encryptionKey)
+		iBusModule.Login("6", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["7"].MouseButton1Click:Connect(function()
-		iBusModule.Login("7", scriptRef, encryptionKey)
+		iBusModule.Login("7", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["8"].MouseButton1Click:Connect(function()
-		iBusModule.Login("8", scriptRef, encryptionKey)
+		iBusModule.Login("8", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["9"].MouseButton1Click:Connect(function()
-		iBusModule.Login("9", scriptRef, encryptionKey)
+		iBusModule.Login("9", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui["0"].MouseButton1Click:Connect(function()
-		iBusModule.Login("0", scriptRef, encryptionKey)
+		iBusModule.Login("0", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.Esc.MouseButton1Click:Connect(function()
-		iBusModule.Login("Esc", scriptRef, encryptionKey)
+		iBusModule.Login("Esc", scriptRef)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.Enter.MouseButton1Click:Connect(function()
-		iBusModule.Login("Enter", scriptRef, encryptionKey, routes, garage)
+		iBusModule.Login("Enter", scriptRef, routes, garage)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.Inc.MouseButton1Click:Connect(function()
-		iBusModule.Login("Inc", scriptRef, encryptionKey, routes, garage)
+		iBusModule.Login("Inc", scriptRef, routes, garage)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.Dec.MouseButton1Click:Connect(function()
-		iBusModule.Login("Dec", scriptRef, encryptionKey, routes, garage)
+		iBusModule.Login("Dec", scriptRef, routes, garage)
 	end)
 
 	scriptRef.Parent.Buttons.SurfaceGui.Screensaver.MouseButton1Click:Connect(function()
-		iBusModule.ButtonPressed("Screensaver", scriptRef, encryptionKey)
+		iBusModule.ButtonPressed("Screensaver", scriptRef)
 	end)
 end
 
-function iBusModule.ButtonPressed(button, scriptRef, eK, routes, garage, manualAnnouncements)
-	if eK == encryptionKey then
+function iBusModule.ButtonPressed(button, scriptRef, routes, garage, manualAnnouncements)
 		if button == "Screensaver" then
-			iBusModule.ToggleScreensaver("Opposite", scriptRef, eK)
+			iBusModule.ToggleScreensaver("Opposite", scriptRef)
 		
 		elseif scriptRef:GetAttribute("currentPage") == "LoginDisplay" and scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible == false then
 			if button == "SideOne" then
-				iBusModule.Login("Garage", scriptRef, eK)
+				iBusModule.Login("Garage", scriptRef)
 			elseif button == "SideTwo" then
-				iBusModule.Login("Route", scriptRef, eK)
+				iBusModule.Login("Route", scriptRef)
 			elseif button == "SideThree" then
-				iBusModule.Login("OperNo", scriptRef, eK)
+				iBusModule.Login("OperNo", scriptRef)
 			elseif button == "SideFour" then
-				iBusModule.Login("TripNo", scriptRef, eK)
+				iBusModule.Login("TripNo", scriptRef)
 			elseif button == "BottomFive" then
-				iBusModule.ContrastControl("Up", scriptRef, eK)
+				iBusModule.ContrastControl("Up", scriptRef)
 			elseif button == "BottomFour" then
-				iBusModule.ContrastControl("Down", scriptRef, eK)
+				iBusModule.ContrastControl("Down", scriptRef)
 			elseif button == "BottomTwo" then
-				iBusModule.Login("LogOff", scriptRef, eK, routes, garage)
+				iBusModule.Login("LogOff", scriptRef, routes, garage)
 			end
 		elseif scriptRef:GetAttribute("currentPage") == "RouteVariant" and scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible == false then
 			if button == "SideOne" then
-				iBusModule.RouteVariant("With Timetable", scriptRef, eK)
+				iBusModule.RouteVariant("With Timetable", scriptRef)
 			elseif button == "SideTwo" then
-				iBusModule.RouteVariant("Route Variant", scriptRef, eK)
+				iBusModule.RouteVariant("Route Variant", scriptRef)
 			elseif button == "BottomOne" then
-				iBusModule.ChangePage("LoginDisplay", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("LoginDisplay", scriptRef, routes, garage)
 			elseif button == "BottomFive" then
-				iBusModule.ContrastControl("Up", scriptRef, eK)
+				iBusModule.ContrastControl("Up", scriptRef)
 			elseif button == "BottomFour" then
-				iBusModule.ContrastControl("Down", scriptRef, eK)
+				iBusModule.ContrastControl("Down", scriptRef)
 			end
 		elseif scriptRef:GetAttribute("currentPage") == "ChooseDirection" and scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible == false then
 			if button == "SideOne" then
-				iBusModule.ChooseDirection("inbound", scriptRef, eK, routes, garage)
+				iBusModule.ChooseDirection("inbound", scriptRef, routes, garage)
 			elseif button == "SideTwo" then
-				iBusModule.ChooseDirection("outbound", scriptRef, eK, routes, garage)
+				iBusModule.ChooseDirection("outbound", scriptRef, routes, garage)
 			elseif button == "BottomTwo" then
-				iBusModule.ChangePage("RouteVariant", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("RouteVariant", scriptRef, routes, garage)
 			elseif button == "BottomOne" then
-				iBusModule.ChangePage("LoginDisplay", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("LoginDisplay", scriptRef, routes, garage)
 			end
 		elseif scriptRef:GetAttribute("currentPage") == "Home" and scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible == false then
 			if button == "BottomFour" then
-				iBusModule.ChangePage("Announcements", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("Announcements", scriptRef, routes, garage)
 			elseif button == "BottomThree" then
-				iBusModule.ChangePage("ChooseDirection", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("ChooseDirection", scriptRef, routes, garage)
 			elseif button == "BottomTwo" then
-				iBusModule.ChangePage("Curtailments", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("Curtailments", scriptRef, routes, garage)
 			elseif button == "BottomOne" then
-				iBusModule.ChangePage("LoginDisplay", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("LoginDisplay", scriptRef, routes, garage)
 			elseif button == "SideOne" then
-				iBusModule.Home("SideOne", scriptRef, eK)
+				iBusModule.Home("SideOne", scriptRef)
 			elseif button == "SideTwo" then
-				iBusModule.Home("SideTwo", scriptRef, eK)
+				iBusModule.Home("SideTwo", scriptRef)
 			elseif button == "SideThree" then
-				iBusModule.Home("SideThree", scriptRef, eK)
+				iBusModule.Home("SideThree", scriptRef)
 			elseif button == "SideFour" then
-				iBusModule.Home("SideFour", scriptRef, eK)
+				iBusModule.Home("SideFour", scriptRef)
 			end
 		elseif scriptRef:GetAttribute("currentPage") == "Curtailments" and scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible == false then
 			if button == "SideThree" then
-				iBusModule.ChangePage("CurtailmentsList", scriptRef, eK, routes, garage)
-				iBusModule.CurtailmentsList("Initialise", scriptRef, encryptionKey, routes, garage)
+				iBusModule.ChangePage("CurtailmentsList", scriptRef, routes, garage)
+				iBusModule.CurtailmentsList("Initialise", scriptRef, routes, garage)
 			elseif button == "BottomOne" then
-				iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("Home", scriptRef, routes, garage)
 			elseif button == "BottomFive" then
-				iBusModule.ContrastControl("Up", scriptRef, eK)
+				iBusModule.ContrastControl("Up", scriptRef)
 			elseif button == "BottomFour" then
-				iBusModule.ContrastControl("Down", scriptRef, eK)
+				iBusModule.ContrastControl("Down", scriptRef)
 			end
 		elseif scriptRef:GetAttribute("currentPage") == "Announcements" and scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible == false then
 			if button == "BottomFour" then
-				iBusModule.ManualAnnouncements("Up", scriptRef, eK, manualAnnouncements, routes, garage)
+				iBusModule.ManualAnnouncements("Up", scriptRef, manualAnnouncements, routes, garage)
 			elseif button == "BottomFive" then
-				iBusModule.ManualAnnouncements("Down", scriptRef, eK, manualAnnouncements, routes, garage)
+				iBusModule.ManualAnnouncements("Down", scriptRef, manualAnnouncements, routes, garage)
 			elseif button == "BottomOne" then
-				iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("Home", scriptRef, routes, garage)
 			elseif button == "SideOne" then
-				iBusModule.ManualAnnouncements("SideOne", scriptRef, eK, manualAnnouncements, routes, garage)
+				iBusModule.ManualAnnouncements("SideOne", scriptRef, manualAnnouncements, routes, garage)
 			elseif button == "SideTwo" then
-				iBusModule.ManualAnnouncements("SideTwo", scriptRef, eK, manualAnnouncements, routes, garage)
+				iBusModule.ManualAnnouncements("SideTwo", scriptRef, manualAnnouncements, routes, garage)
 			elseif button == "SideThree" then
-				iBusModule.ManualAnnouncements("SideThree", scriptRef, eK, manualAnnouncements, routes, garage)
+				iBusModule.ManualAnnouncements("SideThree", scriptRef, manualAnnouncements, routes, garage)
 			elseif button == "SideFour" then
-				iBusModule.ManualAnnouncements("SideFour", scriptRef, eK, manualAnnouncements, routes, garage)
+				iBusModule.ManualAnnouncements("SideFour", scriptRef, manualAnnouncements, routes, garage)
 			end
 		elseif scriptRef:GetAttribute("currentPage") == "CurtailmentsList" and scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible == false then
 			if button == "BottomFour" then
-					iBusModule.CurtailmentsList("Up", scriptRef, eK, routes, garage)
+					iBusModule.CurtailmentsList("Up", scriptRef, routes, garage)
 			elseif button == "BottomFive" then
-					iBusModule.CurtailmentsList("Down", scriptRef, eK, routes, garage)
+					iBusModule.CurtailmentsList("Down", scriptRef, routes, garage)
 			elseif button == "BottomOne" then
-				iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+				iBusModule.ChangePage("Home", scriptRef, routes, garage)
 			elseif button == "SideOne" then
-					iBusModule.CurtailmentsList("SideOne", scriptRef, eK, routes, garage)
+					iBusModule.CurtailmentsList("SideOne", scriptRef, routes, garage)
 			elseif button == "SideTwo" then
-					iBusModule.CurtailmentsList("SideTwo", scriptRef, eK, routes, garage)
+					iBusModule.CurtailmentsList("SideTwo", scriptRef, routes, garage)
 			elseif button == "SideThree" then
-					iBusModule.CurtailmentsList("SideThree", scriptRef, eK, routes, garage)
+					iBusModule.CurtailmentsList("SideThree", scriptRef, routes, garage)
 			elseif button == "SideFour" then
-					iBusModule.CurtailmentsList("SideFour", scriptRef, eK, routes, garage)
+					iBusModule.CurtailmentsList("SideFour", scriptRef, routes, garage)
 			end
 		end
-	end	
 end
 
-function iBusModule.Login(signal, scriptRef, eK, routes, garage)
-	if eK == encryptionKey then
+function iBusModule.Login(signal, scriptRef, routes, garage)
 		local function SelectLine()
 			scriptRef.Parent.Screen.SurfaceGui.LoginDisplay:SetAttribute("selectedLine", signal)
 			local selectedLine = scriptRef.Parent.Screen.SurfaceGui.LoginDisplay:GetAttribute("selectedLine")
@@ -283,7 +278,7 @@ function iBusModule.Login(signal, scriptRef, eK, routes, garage)
 								for _, route in pairs(routes) do
 									if routetext.Text == route.route and garagetext.Text ~= "" and opernotext.Text ~= "" and tripnotext ~= "" then
 
-										iBusModule.ChangePage("RouteVariant", scriptRef, eK, routes, garage)
+										iBusModule.ChangePage("RouteVariant", scriptRef, routes, garage)
 										scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("route", scriptRef.Parent.Screen.SurfaceGui.LoginDisplay.Login.Route.Inputt.Text)
 										scriptRef.Parent.Screen.SurfaceGui.ChooseDirection.Route.Text = route.route
 										scriptRef.Parent.Screen.SurfaceGui.ChooseDirection.ChooseDirection.Direction.Text = string.upper(route.destinationIn)
@@ -309,8 +304,7 @@ function iBusModule.Login(signal, scriptRef, eK, routes, garage)
 						if nextIndex <= #alphabet then
 							targetText.Text = everythingButLast .. alphabet[nextIndex]
 						else
-							-- Handle case where the last letter is Z and needs to wrap around or stay as Z
-							targetText.Text = everythingButLast .. "Z" -- Example behavior, adjust as needed
+							targetText.Text = everythingButLast .. "Z"
 						end
 						break
 					else
@@ -332,8 +326,7 @@ function iBusModule.Login(signal, scriptRef, eK, routes, garage)
 						if nextIndex <= #alphabet then
 							targetText.Text = everythingButLast .. alphabet[nextIndex]
 						else
-							-- Handle case where the last letter is Z and needs to wrap around or stay as Z
-							targetText.Text = everythingButLast .. "A" -- Example behavior, adjust as needed
+							targetText.Text = everythingButLast .. "A"
 						end
 						break
 					else
@@ -348,7 +341,7 @@ function iBusModule.Login(signal, scriptRef, eK, routes, garage)
 
 		if signal == "LogOff" then
 			wait(6)
-			iBusModule.UpdatePAXMain(garage, eK, scriptRef)
+			iBusModule.UpdatePAXMain(garage, scriptRef)
 			scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("loggedIn", false)
 			scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:SetAttribute("CurrentDestinationId", 0)
 			scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("deadrunning", true)
@@ -371,25 +364,22 @@ function iBusModule.Login(signal, scriptRef, eK, routes, garage)
 			end
 
 		end
-	end	
 end
 
-function iBusModule.RouteVariant(signal, scriptRef, eK, routes, garage)
-	if eK == encryptionKey then
+function iBusModule.RouteVariant(signal, scriptRef, routes, garage)
 		if signal == "With Timetable" then
 			return "Feature not available"
 		elseif signal == "Route Variant" then
-			iBusModule.ChangePage("ChooseDirection", scriptRef, eK, routes, garage)
+			iBusModule.ChangePage("ChooseDirection", scriptRef, routes, garage)
 		end
-	end
 end
 
-function iBusModule.ChooseDirection(chosen, scriptRef, eK, routes, garage)
+function iBusModule.ChooseDirection(chosen, scriptRef, routes, garage)
 
 
 	for _, route in pairs(routes) do
 		if scriptRef.Parent.Screen.SurfaceGui.ChooseDirection.Route.Text == route.route then
-			iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+			iBusModule.ChangePage("Home", scriptRef, routes, garage)
 			scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("loggedIn", true)
 			scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("deadrunning", false)
 			scriptRef:SetAttribute("curtailment", false)
@@ -408,7 +398,7 @@ function iBusModule.ChooseDirection(chosen, scriptRef, eK, routes, garage)
 			if chosen == "inbound" then
 				scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("mainPAXAnnouncement", route.route.." to "..route.destinationIn)
 				scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("inbound", true)
-				iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), encryptionKey, scriptRef)
+				iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), scriptRef)
 				scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:SetAttribute("CurrentDestinationId", route.destinationInSoundId)
 				scriptRef:SetAttribute("playingManualAnnouncement", false)
 
@@ -430,7 +420,7 @@ function iBusModule.ChooseDirection(chosen, scriptRef, eK, routes, garage)
 			elseif chosen == "outbound" then
 				scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("inbound", false)
 				scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("mainPAXAnnouncement", route.route.." to "..route.destinationOut)
-				iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), encryptionKey, scriptRef)
+				iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), scriptRef)
 				scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:SetAttribute("CurrentDestinationId", route.destinationOutSoundId)
 
 				scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..route.destinationOutSoundId
@@ -453,8 +443,7 @@ function iBusModule.ChooseDirection(chosen, scriptRef, eK, routes, garage)
 	end
 end
 
-function iBusModule.ChangePage(desiredPage, scriptRef, eK, routes, garage)
-	if eK == encryptionKey then
+function iBusModule.ChangePage(desiredPage, scriptRef, routes, garage)
 		for _, child in ipairs(scriptRef.Parent.Screen.SurfaceGui:GetChildren()) do
 			if child:IsA("CanvasGroup") then
 				if child.Name ~= "Background" and child.Visible == true then
@@ -464,11 +453,9 @@ function iBusModule.ChangePage(desiredPage, scriptRef, eK, routes, garage)
 		end
 		game:GetService("TweenService"):Create(scriptRef.Parent.Screen.SurfaceGui[desiredPage], TweenInfo.new(0.2, Enum.EasingStyle.Quad), {GroupTransparency = 0}):Play()
 		scriptRef:SetAttribute("currentPage", desiredPage)
-	end
 end
 
-function iBusModule.ToggleScreensaver(signal, scriptRef, eK)
-	if eK == encryptionKey then
+function iBusModule.ToggleScreensaver(signal, scriptRef)
 		if signal == "Opposite" then
 			if scriptRef.Parent.Screen.SurfaceGui.Screensaver.GroupTransparency == 1 then
 				scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible = true
@@ -486,11 +473,9 @@ function iBusModule.ToggleScreensaver(signal, scriptRef, eK)
 			wait(0.1)
 			scriptRef.Parent.Screen.SurfaceGui.Screensaver.Visible = false
 		end
-	end
 end
 
-function iBusModule.Lighting(signal, scriptRef, eK)
-	if eK == encryptionKey then
+function iBusModule.Lighting(signal, scriptRef)
 		local location = scriptRef.Parent.ButtonsMesh
 		if signal == true then
 			if not location:FindFirstChild("SurfaceAppearance") and location:FindFirstChild("Texture").Transparency ~= 0.9 then
@@ -505,11 +490,9 @@ function iBusModule.Lighting(signal, scriptRef, eK)
 			location:FindFirstChild("SurfaceAppearance"):Destroy()
 			location:FindFirstChild("Texture").Transparency = 1
 		end
-	end
 end
 
-function iBusModule.UpdatePAXMain(msg, eK, scriptRef)
-	if eK == encryptionKey then
+function iBusModule.UpdatePAXMain(msg, scriptRef)
 		for _, descendant in pairs(scriptRef.Parent.Parent:GetDescendants()) do
 			if descendant.Name == "iBusPAX" then
 				descendant.iBusUp.SGUI:SetAttribute("input", msg)
@@ -521,11 +504,9 @@ function iBusModule.UpdatePAXMain(msg, eK, scriptRef)
 				descendant.Display.SurfaceGui.Announcement.ManualAnnouncement:SetAttribute("input", msg)
 			end
 		end
-	end
 end
 
-function iBusModule.UpdatePAXLower(msg, eK, scriptRef)
-	if eK == encryptionKey then
+function iBusModule.UpdatePAXLower(msg, scriptRef)
 
 		for _, descendant in pairs(scriptRef.Parent.Parent:GetDescendants()) do
 			if descendant.Name == "iBusPAX" then
@@ -535,7 +516,6 @@ function iBusModule.UpdatePAXLower(msg, eK, scriptRef)
 				descendant.Display.SurfaceGui.Feeder:SetAttribute("input", msg)
 			end
 		end
-	end
 end
 
 function iBusModule.iBusExtraInfo()
@@ -546,10 +526,29 @@ function iBusModule.iBusExtraInfo()
 	end
 end
 
-function iBusModule.ManualAnnouncements(signal, scriptRef, eK, manualAnnouncements, routes, garage)
+function iBusModule.ManualAnnouncements(signal, scriptRef, manualAnnouncements, routes, garage)
 	-- Sample manualAnnouncements table
+	
+	local function splitTable(originalTable, maxValues)
+		local result = {}
+		local currentSubTable = {}
 
-	local manualAnnouncements = manualAnnouncements
+		for i, value in ipairs(originalTable) do
+			table.insert(currentSubTable, value)
+			if #currentSubTable == maxValues then
+				table.insert(result, currentSubTable)
+				currentSubTable = {}
+			end
+		end
+
+		if #currentSubTable > 0 then
+			table.insert(result, currentSubTable)
+		end
+
+		return result
+	end
+	
+	local manualAnnouncements = splitTable(manualAnnouncements, 4)
 
 	local totalPages = #manualAnnouncements
 
@@ -591,32 +590,32 @@ function iBusModule.ManualAnnouncements(signal, scriptRef, eK, manualAnnouncemen
 			updateGUI(scriptRef.Parent.Screen.SurfaceGui.Announcements.ScrollValue.Value)
 		end
 	elseif signal == "SideOne" then
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SOne:GetAttribute("passengerDisplay"), eK, scriptRef)
-		iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SOne:GetAttribute("passengerDisplay"), scriptRef)
+		iBusModule.ChangePage("Home", scriptRef, routes, garage)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SOne:GetAttribute("soundId")
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Stop()
 		wait(0.5)
 		scriptRef:SetAttribute("playingManualAnnouncement", true)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
 	elseif signal == "SideTwo" then
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.STwo:GetAttribute("passengerDisplay"), eK, scriptRef)
-		iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.STwo:GetAttribute("passengerDisplay"), scriptRef)
+		iBusModule.ChangePage("Home", scriptRef, routes, garage)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.STwo:GetAttribute("soundId")
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Stop()
 		wait(0.5)
 		scriptRef:SetAttribute("playingManualAnnouncement", true)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
 	elseif signal == "SideThree" then
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SThree:GetAttribute("passengerDisplay"), eK, scriptRef)
-		iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SThree:GetAttribute("passengerDisplay"), scriptRef)
+		iBusModule.ChangePage("Home", scriptRef, routes, garage)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SThree:GetAttribute("soundId")
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Stop()
 		wait(0.5)
 		scriptRef:SetAttribute("playingManualAnnouncement", true)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
 	elseif signal == "SideFour" then
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SFour:GetAttribute("passengerDisplay"), eK, scriptRef)
-		iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SFour:GetAttribute("passengerDisplay"), scriptRef)
+		iBusModule.ChangePage("Home", scriptRef, routes, garage)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..scriptRef.Parent.Screen.SurfaceGui.Announcements.Announcements.SFour:GetAttribute("soundId")
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Stop()
 		wait(0.5)
@@ -625,8 +624,7 @@ function iBusModule.ManualAnnouncements(signal, scriptRef, eK, manualAnnouncemen
 	end
 end
 
-function iBusModule.CurtailmentsList(signal, scriptRef, eK, routes, garage)
-	-- Sample manualAnnouncements table
+function iBusModule.CurtailmentsList(signal, scriptRef, routes, garage)
 	local curtailmentsList = {}
 	local curtailmentStops = {}
 	
@@ -692,14 +690,14 @@ function iBusModule.CurtailmentsList(signal, scriptRef, eK, routes, garage)
 	end
 	
 	local function submitCurtailment(chosenCurtailment, soundId, numberOfStops)
-		iBusModule.ChangePage("Home", scriptRef, eK, routes, garage)
+		iBusModule.ChangePage("Home", scriptRef, routes, garage)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("loggedIn", true)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("deadrunning", false)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("mainPAXAnnouncement", scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("route").." to "..chosenCurtailment)
 		scriptRef:SetAttribute("currentCurtailment", chosenCurtailment)
 		scriptRef:SetAttribute("curtailment", true)
 		
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), encryptionKey, scriptRef)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), scriptRef)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:SetAttribute("CurrentDestinationId", soundId)
 		scriptRef:SetAttribute("playingManualAnnouncement", false)
 
@@ -766,31 +764,31 @@ function iBusModule.CurtailmentsList(signal, scriptRef, eK, routes, garage)
 	end
 end
 
-function iBusModule.Home(signal, scriptRef, eK)
+function iBusModule.Home(signal, scriptRef)
 	if signal == "SideOne" then
 		local soundId = scriptRef.Parent.Screen.SurfaceGui.Home.Home.SOne:GetAttribute("soundId")
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.SOne.Text, encryptionKey, scriptRef)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.SOne.Text, scriptRef)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("nextStop", scriptRef.Parent.Screen.SurfaceGui.Home.Home.SOne.Text)
 		wait(0.5)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..soundId
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
 	elseif signal == "SideTwo" then
 		local soundId = scriptRef.Parent.Screen.SurfaceGui.Home.Home.STwo:GetAttribute("soundId")
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.STwo.Text, encryptionKey, scriptRef)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.STwo.Text, scriptRef)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("nextStop", scriptRef.Parent.Screen.SurfaceGui.Home.Home.STwo.Text)
 		wait(0.5)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..soundId
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
 	elseif signal == "SideThree" then
 		local soundId = scriptRef.Parent.Screen.SurfaceGui.Home.Home.SThree:GetAttribute("soundId")
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.SThree.Text, encryptionKey, scriptRef)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.SThree.Text, scriptRef)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("nextStop", scriptRef.Parent.Screen.SurfaceGui.Home.Home.SThree.Text)
 		wait(0.5)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..soundId
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
 	elseif signal == "SideFour" then
 		local soundId = scriptRef.Parent.Screen.SurfaceGui.Home.Home.SFour:GetAttribute("soundId")
-		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.SFour.Text, encryptionKey, scriptRef)
+		iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.Home.Home.SFour.Text, scriptRef)
 		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("nextStop", scriptRef.Parent.Screen.SurfaceGui.Home.Home.SFour.Text)
 		wait(0.5)
 		scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..soundId
@@ -798,8 +796,7 @@ function iBusModule.Home(signal, scriptRef, eK)
 	end
 end
 
-function iBusModule.ContrastControl(signal, scriptRef, eK)
-	if eK == encryptionKey then
+function iBusModule.ContrastControl(signal, scriptRef)
 		if signal == "Up" then
 			scriptRef.Parent.Screen.SurfaceGui.Configuration.ContrastAdjustment.Value += 0.2
 			scriptRef.Parent.Screen.SurfaceGui.Brightness = scriptRef.Parent.Screen.SurfaceGui.Configuration.ContrastAdjustment.Value
@@ -808,11 +805,9 @@ function iBusModule.ContrastControl(signal, scriptRef, eK)
 			scriptRef.Parent.Screen.SurfaceGui.Configuration.ContrastAdjustment.Value -= 0.2
 			scriptRef.Parent.Screen.SurfaceGui.Brightness = scriptRef.Parent.Screen.SurfaceGui.Configuration.ContrastAdjustment.Value
 		end
-	end
 end
 
-function iBusModule.NextStopAnnouncements(scriptRef, eK, routes, garage)
-	if eK == encryptionKey then
+function iBusModule.NextStopAnnouncements(scriptRef, routes, garage)
 		local curtailmentStops = {}
 		local diversionTests = {}
 		
@@ -998,7 +993,7 @@ function iBusModule.NextStopAnnouncements(scriptRef, eK, routes, garage)
 					--	db = true
 					--	wait(10)
 					--	if isOnDiversion(part, route) == true then
-					--		iBusModule.UpdatePAXMain("*", encryptionKey, scriptRef)
+					--		iBusModule.UpdatePAXMain("*", scriptRef)
 					--		scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("nextStop", "*")
 					--		scriptRef:SetAttribute("playingManualAnnouncement", false)
 					--		db = false
@@ -1018,7 +1013,7 @@ function iBusModule.NextStopAnnouncements(scriptRef, eK, routes, garage)
 							print(inOut)
 							db = true
 
-							iBusModule.UpdatePAXMain(stopName, encryptionKey, scriptRef)
+							iBusModule.UpdatePAXMain(stopName, scriptRef)
 
 							local startIndex = nil
 							for i, value in ipairs(inOut) do
@@ -1033,13 +1028,12 @@ function iBusModule.NextStopAnnouncements(scriptRef, eK, routes, garage)
 									inOut[startIndex + 2],
 									inOut[startIndex + 3]
 								}
-								-- Update text fields with conditional checks
+
 								scriptRef.Parent.Screen.SurfaceGui.Home.Home.SOne.Text = stopName
 								scriptRef.Parent.Screen.SurfaceGui.Home.Home.SOne:SetAttribute("soundId", soundId)
 								scriptRef.Parent.Screen.SurfaceGui.TrackingData:SetAttribute("nextStop", stopName)
 								scriptRef:SetAttribute("playingManualAnnouncement", false)
 
-								-- Check and set STwo.Text
 								if nextThreeStops[1] then
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.STwo.Text = nextThreeStops[1][1]
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.STwo:SetAttribute("soundId", nextThreeStops[1][2])
@@ -1048,7 +1042,6 @@ function iBusModule.NextStopAnnouncements(scriptRef, eK, routes, garage)
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.STwo:SetAttribute("soundId", 0)
 								end
 
-								-- Check and set SThree.Text
 								if nextThreeStops[2] then
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.SThree.Text = nextThreeStops[2][1]
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.SThree:SetAttribute("soundId", nextThreeStops[2][2])
@@ -1057,7 +1050,6 @@ function iBusModule.NextStopAnnouncements(scriptRef, eK, routes, garage)
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.SThree:SetAttribute("soundId", 0)
 								end
 
-								-- Check and set SFour.Text
 								if nextThreeStops[3] then
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.SFour.Text = nextThreeStops[3][1]
 									scriptRef.Parent.Screen.SurfaceGui.Home.Home.SFour:SetAttribute("soundId", nextThreeStops[3][2])
@@ -1083,14 +1075,13 @@ function iBusModule.NextStopAnnouncements(scriptRef, eK, routes, garage)
 			end
 		end)
 
-	end
 end
 
-function iBusModule.FrontDoorTrigger(scriptRef, eK)
-	if eK == encryptionKey and scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:GetAttribute("CurrentDestinationId") ~= 0 then
+function iBusModule.FrontDoorTrigger(scriptRef)
+	if scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:GetAttribute("CurrentDestinationId") ~= 0 then
 		wait(6)
 		if scriptRef:GetAttribute("Playing") == false then
-			iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), encryptionKey, scriptRef)
+			iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), scriptRef)
 			wait(4)
 			scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:GetAttribute("CurrentDestinationId")
 			scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
@@ -1098,14 +1089,14 @@ function iBusModule.FrontDoorTrigger(scriptRef, eK)
 	end
 end
 
-function iBusModule.RearDoorTrigger(scriptRef, eK)
-	if eK == encryptionKey and scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:GetAttribute("CurrentDestinationId") ~= 0 then
+function iBusModule.RearDoorTrigger(scriptRef)
+	if scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:GetAttribute("CurrentDestinationId") ~= 0 then
 		wait(4)
 		if scriptRef:GetAttribute("Playing") == false then
 			if scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("loggedIn") == false then
-				iBusModule.UpdatePAXMain("Bus terminates here", encryptionKey, scriptRef)
+				iBusModule.UpdatePAXMain("Bus terminates here", scriptRef)
 			else
-				iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), encryptionKey, scriptRef)
+				iBusModule.UpdatePAXMain(scriptRef.Parent.Screen.SurfaceGui.TrackingData:GetAttribute("mainPAXAnnouncement"), scriptRef)
 				wait(5)
 				scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder.SoundId = "rbxassetid://"..scriptRef.Parent.Screen.SurfaceGui.TrackingData.DriverData:GetAttribute("CurrentDestinationId")
 				scriptRef.Parent.Parent.AnnouncementBlock.AnnouncementHolder:Play()
@@ -1308,17 +1299,14 @@ char id=8470 x=19 y=311 width=69 height=52 xoffset=-1 yoffset=6 xadvance=69 page
 	-----
 
 	local function feed(str: string, child)
-		-- example feed function:
 
-		-- first off, we have a function that will return a table of graphemes
 		local splitString = (function()
 			local graphemes = {}
-			for i,v in utf8.graphemes(str) do -- for each of the graphemes,
-				table.insert(graphemes, str:sub(i,v)) -- we have to use string.sub because utf8 returns a pair where i is the beginning of the grapheme and v is the end of the grapheme. We must use this because we're working with a non-ASCII character (№).
-			end
-			return graphemes -- returns the table of graphemes
-		end)() -- ensure you call this function so it actually assigns the graphemes table to the splitString variable
-		local newFrame = Instance.new('Frame') -- create a new frame that will store the glyphs
+			for i,v in utf8.graphemes(str) do
+				table.insert(graphemes, str:sub(i,v))
+			return graphemes
+		end)()
+		local newFrame = Instance.new('Frame')
 		newFrame.Parent = child
 		newFrame.Position = UDim2.new(0.5, 0, 0, 0)
 		local newUIScale = Instance.new("UIScale")
@@ -1327,25 +1315,25 @@ char id=8470 x=19 y=311 width=69 height=52 xoffset=-1 yoffset=6 xadvance=69 page
 
 		local newUIListLayout = Instance.new('UIListLayout')
 		newUIListLayout.Parent = newFrame
-		newUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder -- we don't want them to be aligned vertically
-		newUIListLayout.FillDirection = Enum.FillDirection.Horizontal -- align them horizontally from left to right
-		newUIListLayout.Padding = UDim.new(0,0) -- we don't want any padding
+		newUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		newUIListLayout.FillDirection = Enum.FillDirection.Horizontal
+		newUIListLayout.Padding = UDim.new(0,0)
 		newUIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 
-		for i,v in ipairs(splitString) do -- where i is the index and v is the glyph
-			local thisLetter = stringFolder:FindFirstChild(v) -- look inside the folder for a frame with the glyph's name
-			if thisLetter then -- if it found a frame with this name,
-				local newLetter = thisLetter:Clone() -- clone it and parent it to the frame
+		for i,v in ipairs(splitString) do
+			local thisLetter = stringFolder:FindFirstChild(v)
+			if thisLetter then
+				local newLetter = thisLetter:Clone()
 				newLetter.LayoutOrder = i
 				newLetter.Parent = newFrame
 
-				local next = splitString[i + 1] -- look for the next character to handle kernings
+				local next = splitString[i + 1]
 				if next then
-					local kerningThisLetter = info.kernings[v] -- inside the kernings table, look for the kerning for this letter and the next letter
-					if kerningThisLetter then -- if there is a kerning table for this letter then
-						local kerningNextLetter = kerningThisLetter[next] -- if inside that kerning table there is a kerning for the next letter
-						if kerningNextLetter then -- if there's a kerning then
-							newFrame.Size -= UDim2.fromOffset(0,kerningNextLetter) -- subtract it from the frame's size, not the actual letter label's size because we don't want to clip the letter
+					local kerningThisLetter = info.kernings[v]
+					if kerningThisLetter then 
+						local kerningNextLetter = kerningThisLetter[next] 
+						if kerningNextLetter then 
+							newFrame.Size -= UDim2.fromOffset(0,kerningNextLetter) 
 						end
 					end
 				end
@@ -1370,16 +1358,14 @@ char id=8470 x=19 y=311 width=69 height=52 xoffset=-1 yoffset=6 xadvance=69 page
 			newUIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Left
 			newFrame.Position = startPosition
 
-			-- Function to animate the announcement
 			local function animateAnnouncement()
 				while newFrame do
-					newFrame:TweenPosition(endPosition, "Out", "Linear", duration) -- Consistent duration
-					wait(duration + 0.1) -- Wait for animation to complete plus delay
+					newFrame:TweenPosition(endPosition, "Out", "Linear", duration)
+					wait(duration + 0.1) 
 					newFrame.Position = startPosition
 				end
 			end
 
-			-- Start animation in a coroutine to avoid blocking
 			coroutine.wrap(animateAnnouncement)()
 		end
 
@@ -1646,8 +1632,8 @@ function iBusModule.iBusDisplay_New(scriptRef)
 
 					spawn(function()
 						while true do
-							descendant.Display.SurfaceGui.Announcement.ManualAnnouncement:TweenPosition(endPosition, "Out", "Linear", duration) -- Consistent duration
-							wait(duration + 0.1) -- Wait for animation to complete plus delay
+							descendant.Display.SurfaceGui.Announcement.ManualAnnouncement:TweenPosition(endPosition, "Out", "Linear", duration)
+							wait(duration + 0.1)
 							descendant.Display.SurfaceGui.Announcement.ManualAnnouncement.Position = startPosition
 						end
 					end)
