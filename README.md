@@ -1,6 +1,8 @@
 # iBus System
 A basic replica of the real-life iBus System used by Transport for London, but written in lua for Roblox. This project is in no way affiliated with Transport for London, or any sort of organisation involving the development of the official model.
 
+This project utilises the [.fnt file interpreter from another developer. Please feel free to check out their model.](https://devforum.roblox.com/t/fnt-file-to-image-labels-custom-fonts-in-studio/1684543)
+
 ## Error Analysis
 
 ```
