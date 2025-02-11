@@ -1,9 +1,6 @@
 --[[
 
-leBus System - Licensed by LegitimatelyEris Studios to clients who have made purchases for this product directly
-Any unauthorised persons using this product are liable to DMCA action.
-
-Version: [PRERELEASE]
+leBus System - Licensed by LegitimatelyEris Studios, download updates @ https://github.com/le-open-source/iBus-System
 
 ]]--
 
