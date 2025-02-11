@@ -6,7 +6,7 @@ leBus System - Licensed by LegitimatelyEris Studios, download updates @ https://
 
 -- User Configuration
 
-local garage = "Lea Interchange"
+local garage = ""
 
 local routes = {
 	{
